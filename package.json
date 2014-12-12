@@ -1,0 +1,10 @@
+{
+  "name": "ascidia-cli",
+  "version": "0.0.1",
+  "description": "A port to npm of a command-line utility for rendering technical diagrams from ASCII art.",
+  "bin": {
+    "ascidia-cli": "./ascidia"
+  },
+  "keywords": [
+  ]
+}
