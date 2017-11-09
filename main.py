@@ -113,7 +113,7 @@ class PngOutput(object):
 	EXTS = ("png",)
 	
 	STROKE_W = 2.5 # currently fixed
-	FONT_SIZE = 0.667 # of character heigt
+	FONT_SIZE = 0.9 # of character heigt
 	DASH_PATTERN = 8,8
 	TEXT_BASELINE = 0.75
 	
@@ -214,7 +214,7 @@ class PngOutput(object):
 			self._stroke(poly)
 		
 	def _do_Text(self,text):
-		self.ctx.select_font_face("monospace")
+		self.ctx.select_font_face("Inconsolata")
 		self.ctx.set_font_size(self.prefs.charheight*PngOutput.FONT_SIZE)
 		self.ctx.set_source_rgba(*self._colour(text.colour,text.alpha))
 		self.ctx.move_to(self._x(text.pos[0]),self._y(text.pos[1]+PngOutput.TEXT_BASELINE))
@@ -261,7 +261,7 @@ class SvgOutput(object):
 	EXTS = ("svg","xml")
 
 	STROKE_W = 2.5 # currently fixed
-	FONT_SIZE = 0.667 # of character height
+	FONT_SIZE = 0.9 # of character height
 	DASH_PATTERN = 8,8
 
 	diagram = None
